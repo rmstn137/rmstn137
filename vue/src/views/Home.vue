@@ -1,18 +1,23 @@
+
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>날씨 알아보기</h1>
+    <p>{{ city }}</p>
+    <park />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import park from '@/components/geunsoo.vue'
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+    park
+  },
+  data () {
+    return {
+      city: '서울'
+    }
   }
 }
 </script>
